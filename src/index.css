@@ -2,6 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Kamala Mental Health App Color Palette */
+    --background: 46 24% 95%;           /* #F7F5EB (Floral White) */
+    --foreground: 120 6% 20%;           /* #323431 (Jet) */
+    --card: 0 0% 100%;
+    --card-foreground: 120 6% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 6% 20%;
+    
+    /* Primary - Misty Rose */
+    --primary: 342 39% 91%;             /* #F4DDE3 */
+    --primary-foreground: 120 6% 20%;
+    
+    /* Secondary - Light Cyan */
+    --secondary: 186 55% 84%;           /* #C6E9EE */
+    --secondary-foreground: 120 6% 20%;
+    
+    /* Muted - Mint Green */
+    --muted: 180 52% 89%;               /* #CEF2F2 */
+    --muted-foreground: 120 6% 45%;
+    
+    /* Accent - Pink Lavender */
+    --accent: 309 59% 80%;              /* #EEB6E7 */
+    --accent-foreground: 120 6% 20%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Border */
+    --border: 186 55% 84%;              /* Light Cyan for borders */
+    --input: 186 55% 84%;
+    --ring: 342 39% 91%;                /* Misty Rose for focus rings */
+    
+    /* Chart colors using palette */
+    --chart-1: 342 39% 91%;             /* Misty Rose */
+    --chart-2: 186 55% 84%;             /* Light Cyan */
+    --chart-3: 180 52% 89%;             /* Mint Green */
+    --chart-4: 309 59% 80%;             /* Pink Lavender */
+    --chart-5: 89 50% 90%;              /* Honeydew */
+    
+    /* Additional palette colors */
+    --mint-cream: 146 50% 94%;          /* #EDF8F2 */
+    --honeydew: 89 50% 90%;             /* #EEF5E5 */
+    --linen: 33 50% 93%;                /* #F5EEE4 */
+    --pink-lavender-alt: 309 59% 82%;   /* #EFC6E4 */
+    
+    /* Radius */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 120 6% 15%;
+    --foreground: 46 24% 95%;
+    --card: 120 6% 18%;
+    --card-foreground: 46 24% 95%;
+    --popover: 120 6% 18%;
+    --popover-foreground: 46 24% 95%;
+    --primary: 342 39% 91%;
+    --primary-foreground: 120 6% 15%;
+    --secondary: 186 55% 25%;
+    --secondary-foreground: 46 24% 95%;
+    --muted: 180 52% 25%;
+    --muted-foreground: 46 24% 70%;
+    --accent: 309 59% 30%;
+    --accent-foreground: 46 24% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 186 55% 25%;
+    --input: 186 55% 25%;
+    --ring: 342 39% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+  
+  p, span, div {
+    @apply font-merriweather;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
